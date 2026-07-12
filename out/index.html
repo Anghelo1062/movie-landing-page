@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/sinopsis.jpg"/><link rel="preload" as="image" href="/carrusel-1.jpg.jfif"/><link rel="preload" as="image" href="/carrusel-2.jpg"/><link rel="preload" as="image" href="/carrusel-3.jpg"/><link rel="stylesheet" href="/_next/static/chunks/12hc1t33a3x.o.css" data-precedence="next"/><link rel="stylesheet" href="/_next/static/chunks/04za3hu5nilvo.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/07~a3b~dwxypk.js"/><script src="/_next/static/chunks/08~fa5-t241~w.js" async=""></script><script src="/_next/static/chunks/10tqdwr4m3r-8.js" async=""></script><script src="/_next/static/chunks/turbopack-0wjjco2jomkj..js" async=""></script><script src="/_next/static/chunks/0i4gx.xil6j--.js" async=""></script><script src="/_next/static/chunks/0~gvh_kzm8zau.js" async=""></script><meta name="theme-color" content="#1e3a8a" media="(prefers-color-scheme: light)"/><meta name="color-scheme" content="light"/><title>La Era del Hielo - Landing Page</title><meta name="description" content="Landing Page oficial de La Era del Hielo. Una aventura helada que cambió las películas de animación."/><script src="/_next/static/chunks/03~yq9q893hmn.js" noModule=""></script></head><body class="antialiased"><div hidden=""><!--$--><!--/$--></div><style>
+        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f8f9fa;
+        }
+
+        /* Navbar customizaciones */
+        .navbar-custom {
+          background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+          font-family: 'Luckiest Guy', cursive;
+          font-weight: normal;
+          font-size: 2rem;
+          color: #fff !important;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-link {
+          color: rgba(255, 255, 255, 0.9) !important;
+          font-weight: 500;
+          margin: 0 10px;
+          transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+          color: #fbbf24 !important;
+          text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+
+        /* Banner Principal */
+        .banner {
+          /* Usando la imagen subida a public/banner.jpg.webp */
+          background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.7)), 
+                      url('/banner.jpg.webp') center/cover no-repeat;
+          background-color: #1e3a8a; /* Fallback si la imagen tarda en cargar */
+          height: 100vh;
+          min-height: 600px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: white;
+          /* margin-top no es necesario si el banner ocupa toda la pantalla, pero compensamos el navbar */
+          padding-top: 70px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .banner::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.3) 50%, transparent 70%);
+          animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+
+        .banner-content {
+          position: relative;
+          z-index: 2;
+          animation: fadeInDown 1s ease;
+        }
+
+        @keyframes fadeInDown {
+          from {
+            opacity: 0;
+            transform: translateY(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .banner h1 {
+          font-family: 'Luckiest Guy', cursive;
+          font-size: 5.5rem;
+          font-weight: normal;
+          text-shadow: 4px 4px 0 #1e3a8a, -2px -2px 0 #1e3a8a, 2px -2px 0 #1e3a8a, -2px 2px 0 #1e3a8a, 4px 4px 15px rgba(0, 0, 0, 0.8);
+          margin-bottom: 20px;
+          letter-spacing: 4px;
+          color: white;
+          text-transform: uppercase;
+        }
+
+        .banner p {
+          font-size: 1.3rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+          margin-bottom: 30px;
+        }
+
+        .btn-trailer {
+          background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+          color: #000;
+          font-weight: bold;
+          font-size: 1.1rem;
+          padding: 15px 40px;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+          box-shadow: 0 8px 15px rgba(251, 191, 36, 0.4);
+        }
+
+        .btn-trailer:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 20px rgba(251, 191, 36, 0.6);
+          background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+          color: #000;
+          text-decoration: none;
+        }
+
+        /* Sección Información */
+        .info-section {
+          padding: 80px 0;
+          background: #fff;
+        }
+
+        .section-title {
+          font-family: 'Luckiest Guy', cursive;
+          font-size: 3rem;
+          font-weight: normal;
+          margin-bottom: 40px;
+          text-align: center;
+          color: #1e3a8a;
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          letter-spacing: 2px;
+        }
+
+        .section-title::after {
+          content: '';
+          display: block;
+          width: 100px;
+          height: 4px;
+          background: linear-gradient(90deg, #fbbf24, #f59e0b);
+          margin: 15px auto 0;
+        }
+
+        .sinopsis {
+          font-size: 1.1rem;
+          line-height: 1.8;
+          color: #444;
+          text-align: justify;
+        }
+
+        .info-img {
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s ease;
+          width: 100%;
+          min-height: 300px;
+          background-color: #ddd; /* Espacio placeholder */
+          object-fit: cover;
+        }
+
+        .info-img:hover {
+          transform: scale(1.02);
+        }
+
+        /* Carrusel */
+        .carousel-section {
+          padding: 80px 0;
+          background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+
+        .carousel {
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-item {
+          height: 500px;
+          background-color: #ccc; /* Fallback si no hay imagen */
+        }
+
+        .carousel-item img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 50px;
+          height: 50px;
+          background-color: rgba(30, 58, 138, 0.7);
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all 0.3s ease;
+          margin: 0 20px;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+          background-color: rgba(251, 191, 36, 0.9);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          filter: invert(1);
+        }
+
+        /* Footer */
+        footer {
+          background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+          color: white;
+          padding: 40px 0;
+          text-align: center;
+        }
+
+        footer p {
+          margin: 0;
+          font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .banner h1 {
+            font-size: 2.5rem;
+          }
+
+          .banner p {
+            font-size: 1rem;
+          }
+
+          .section-title {
+            font-size: 1.8rem;
+          }
+
+          .carousel-item {
+            height: 300px;
+          }
+
+          .navbar-brand {
+            font-size: 1.3rem;
+          }
+        }
+      </style><nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom"><div class="container"><a class="navbar-brand" href="#home">❄️ La Era del Hielo</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li><li class="nav-item"><a class="nav-link" href="#info">Información</a></li><li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li></ul></div></div></nav><section class="banner" id="home"><div class="banner-content"><h1>La Era del Hielo</h1><p>Una aventura helada que cambió las películas de animación</p><a href="https://www.youtube.com/watch?v=RI7e1IksKEQ" target="_blank" rel="noopener noreferrer" class="btn-trailer">▶️ Ver Tráiler</a></div></section><section class="info-section" id="info"><div class="container"><h2 class="section-title">Acerca de la Película</h2><div class="row align-items-center mt-5"><div class="col-md-6 mb-4 mb-md-0"><img src="/sinopsis.jpg" alt="Escena de La Era del Hielo" class="img-fluid info-img"/></div><div class="col-md-6"><p class="sinopsis"><strong>La Era del Hielo</strong> es una película de animación por computadora estadounidense de 2002, dirigida por Chris Wedge y Carlos Saldaña. La trama sigue a Manny, un mamut lanudo; Sid, un perezoso; y Diego, un tigre diente de sable, quienes viajan juntos para devolver a un bebé humano a su tribu durante la última era glacial.</p><p class="sinopsis mt-3">Este clásico de animación combina humor, acción y una historia emotiva que encantó a millones de personas en todo el mundo. La química entre los personajes principales y el mundo helado bellamente animado hacen que esta película sea un ícono de la animación moderna.</p><p class="sinopsis mt-3"><strong>Año de Lanzamiento:</strong> 2002 | <strong>Duración:</strong> 81 minutos |<strong> Estudio:</strong> Blue Sky Studios</p></div></div></div></section><section class="carousel-section" id="galeria"><div class="container"><h2 class="section-title mb-5">Galería de la Película</h2><div id="movieCarousel" class="carousel slide" data-bs-ride="carousel"><div class="carousel-indicators"><button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button><button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button><button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button></div><div class="carousel-inner"><div class="carousel-item active"><img src="/carrusel-1.jpg.jfif" alt="Escena 1" class="d-block w-100"/></div><div class="carousel-item"><img src="/carrusel-2.jpg" alt="Escena 2" class="d-block w-100"/></div><div class="carousel-item"><img src="/carrusel-3.jpg" alt="Escena 3" class="d-block w-100"/></div></div><button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span></button><button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span></button></div></div></section><footer><div class="container"><p>© 2024 La Era del Hielo - Landing Page. Todos los derechos reservados.</p><p style="margin-top:10px;font-size:0.9rem">Creado con HTML, CSS, Bootstrap y Next.js</p></div></footer><!--$--><!--/$--><script src="/_next/static/chunks/07~a3b~dwxypk.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[82594,[\"/_next/static/chunks/0i4gx.xil6j--.js\"],\"default\"]\n3:I[15921,[\"/_next/static/chunks/0i4gx.xil6j--.js\"],\"default\"]\n4:I[97086,[\"/_next/static/chunks/0i4gx.xil6j--.js\"],\"ClientPageRoot\"]\n5:I[31713,[\"/_next/static/chunks/0i4gx.xil6j--.js\",\"/_next/static/chunks/0~gvh_kzm8zau.js\"],\"default\"]\n8:I[54439,[\"/_next/static/chunks/0i4gx.xil6j--.js\"],\"OutletBoundary\"]\n9:\"$Sreact.suspense\"\nb:I[54439,[\"/_next/static/chunks/0i4gx.xil6j--.js\"],\"ViewportBoundary\"]\nd:I[54439,[\"/_next/static/chunks/0i4gx.xil6j--.js\"],\"MetadataBoundary\"]\nf:I[86180,[\"/_next/static/chunks/0i4gx.xil6j--.js\"],\"default\",1]\n:HL[\"/_next/static/chunks/12hc1t33a3x.o.css\",\"style\"]\n:HL[\"/_next/static/chunks/04za3hu5nilvo.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"c\":[\"\",\"\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",16],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/12hc1t33a3x.o.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/0i4gx.xil6j--.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"antialiased\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L4\",null,{\"Component\":\"$5\",\"serverProvidedParams\":{\"searchParams\":{},\"params\":{},\"promises\":[\"$@6\",\"$@7\"]}}],[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/04za3hu5nilvo.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/0~gvh_kzm8zau.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$L8\",null,{\"children\":[\"$\",\"$9\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@a\"}]}]]}],{},null,false,null]},null,false,null],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$Lb\",null,{\"children\":\"$Lc\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$Ld\",null,{\"children\":[\"$\",\"$9\",null,{\"name\":\"Next.Metadata\",\"children\":\"$Le\"}]}]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/12hc1t33a3x.o.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]]],\"S\":true,\"h\":null,\"s\":\"$undefined\",\"l\":\"$undefined\",\"p\":\"$undefined\",\"d\":\"$undefined\",\"b\":\"cSmKvq0OLJ-rmaVf05YAN\"}\n"])</script><script>self.__next_f.push([1,"6:{}\n7:\"$0:f:0:1:1:children:0:props:children:0:props:serverProvidedParams:params\"\n"])</script><script>self.__next_f.push([1,"c:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"2\",{\"name\":\"theme-color\",\"content\":\"#1e3a8a\",\"media\":\"(prefers-color-scheme: light)\"}],[\"$\",\"meta\",\"3\",{\"name\":\"color-scheme\",\"content\":\"light\"}]]\n"])</script><script>self.__next_f.push([1,"a:null\ne:[[\"$\",\"title\",\"0\",{\"children\":\"La Era del Hielo - Landing Page\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Landing Page oficial de La Era del Hielo. Una aventura helada que cambió las películas de animación.\"}]]\n"])</script></body></html>
